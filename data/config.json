@@ -1,0 +1,7 @@
+{
+  "fields": [
+    "full_name",
+    "company",
+    "skills"
+  ]
+}

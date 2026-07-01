@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+pandas
+pdfplumber
+phonenumbers
+rapidfuzz
+python-dateutil
+pytest
