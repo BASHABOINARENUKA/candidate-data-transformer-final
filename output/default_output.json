@@ -1,0 +1,10 @@
+{
+    "full_name": "John A. Smith",
+    "company": "Google",
+    "skills": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "FastAPI"
+    ]
+}

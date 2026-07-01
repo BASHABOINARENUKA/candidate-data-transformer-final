@@ -11,7 +11,8 @@ from app.provenance.provenance_engine import ProvenanceEngine
 from app.confidence.confidence_engine import ConfidenceEngine
 from app.projection.projection_engine import ProjectionEngine
 from app.validator.validator import Validator
-
+import os
+import json
 
 def get_args():
     parser = argparse.ArgumentParser(
@@ -155,6 +156,15 @@ def main():
     print("\n========== FINAL OUTPUT ==========\n")
 
     print(projected)
+
+
+
+    os.makedirs("output", exist_ok=True)
+
+    with open("output/default_output.json", "w") as f:
+        json.dump(projected, f, indent=4)
+
+    print("\nOutput saved to output/default_output.json")
 
 
 if __name__ == "__main__":
