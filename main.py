@@ -42,6 +42,11 @@ def get_args():
         required=True,
         help="Path to Config JSON"
     )
+    parser.add_argument(
+    "--output",
+    required=True,
+    help="Output JSON file"
+)
 
     return parser.parse_args()
 
@@ -152,6 +157,7 @@ def main():
     # ------------------------------------
     # Final Output
     # ------------------------------------
+    
 
     print("\n========== FINAL OUTPUT ==========\n")
 
@@ -161,7 +167,7 @@ def main():
 
     os.makedirs("output", exist_ok=True)
 
-    with open("output/default_output.json", "w") as f:
+    with open(args.output, "w") as f:
         json.dump(projected, f, indent=4)
 
     print("\nOutput saved to output/default_output.json")
